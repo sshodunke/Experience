@@ -10,39 +10,39 @@ import Foundation
 class IGDBManager: ObservableObject {
     
     private let APIUrl = "https://api.igdb.com/v4"
-    @Published var games: [Game] = []
     
-    func getListOfGames(endpoint: Endpoint, dataResponse: @escaping (Data) -> Void) {
+    @Published var popularGames: [Game] = []
+    @Published var comingSoon: [Game] = []
+    
+    let POPULAR_GAMES = ""
+    
+    func getListOfGames(endpoint: Endpoint, apiBody: ApiBody) async throws {
         var request = URLRequest(url: URL(string: "\(APIUrl)\(endpoint.url())")!)
         request.setValue("", forHTTPHeaderField: "client-id")
-        request.setValue("Bearer ", forHTTPHeaderField: "Authorization")
+        request.setValue("", forHTTPHeaderField: "authorization")
         request.httpMethod = "POST"
-        let body = "fields name, platforms; search \"Super Mario \";"
-        let data: Data? = body.data(using: .utf8)
-        request.httpBody = data
+        let body = apiBody.rawValue
+        let httpBody: Data? = body.data(using: .utf8)
+        request.httpBody = httpBody
         
-        print(request)
+        let (data, response) = try await URLSession.shared.data(for: request)
         
-        // Perform HTTP Request
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { [weak self] (data, response, error) in
-            guard let data = data, error == nil else {
-                return
-            }
-            
-            // Convert to JSON
-            do {
-                let games = try JSONDecoder().decode([Game].self, from: data)
-                DispatchQueue.main.async {
-                    self?.games = games
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            return
+        }
+        
+        if let decodedResponse = try? JSONDecoder().decode([Game].self, from: data) {
+            DispatchQueue.main.async {
+                switch apiBody {
+                case .popularGames:
+                    self.popularGames = decodedResponse
+                case .comingSoon:
+                    self.comingSoon = decodedResponse
                 }
-                print(games)
-            } catch {
-                print(error.localizedDescription)
             }
-            
-            dataResponse(data)
-        })
-        
-        task.resume()
+            print("games: \(decodedResponse)")
+        } else {
+            print("Could not retrieve data")
+        }
     }
 }

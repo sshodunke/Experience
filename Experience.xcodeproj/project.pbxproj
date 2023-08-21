@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F586D172A93B50F003F2216 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F586D162A93B50F003F2216 /* SearchView.swift */; };
+		2F586D1B2A93B546003F2216 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F586D1A2A93B546003F2216 /* SettingsView.swift */; };
+		2F586D1F2A93B565003F2216 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F586D1E2A93B565003F2216 /* ProfileView.swift */; };
 		2FAD7B342A8A81D700F1537C /* ExperienceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7B332A8A81D700F1537C /* ExperienceApp.swift */; };
-		2FAD7B362A8A81D700F1537C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7B352A8A81D700F1537C /* ContentView.swift */; };
 		2FAD7B382A8A81D800F1537C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD7B372A8A81D800F1537C /* Assets.xcassets */; };
 		2FAD7B3B2A8A81D800F1537C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FAD7B3A2A8A81D800F1537C /* Preview Assets.xcassets */; };
 		2FAD7B452A8A81D800F1537C /* ExperienceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7B442A8A81D800F1537C /* ExperienceTests.swift */; };
@@ -17,6 +19,10 @@
 		2FAD7B5F2A8AADF400F1537C /* IGDBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7B5E2A8AADF400F1537C /* IGDBManager.swift */; };
 		2FAD7B612A8AB84000F1537C /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7B602A8AB84000F1537C /* Endpoint.swift */; };
 		2FAD7B642A8AE65600F1537C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAD7B632A8AE65600F1537C /* Game.swift */; };
+		2FF00E6B2A8CE45B0090D71F /* IGBDHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF00E6A2A8CE45B0090D71F /* IGBDHelper.swift */; };
+		2FF00E762A93AEE50090D71F /* ExperienceTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF00E752A93AEE50090D71F /* ExperienceTabView.swift */; };
+		2FF00E792A93B1850090D71F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF00E782A93B1850090D71F /* HomeView.swift */; };
+		2FF00E7B2A93B1EA0090D71F /* GameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF00E7A2A93B1EA0090D71F /* GameCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F586D162A93B50F003F2216 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2F586D1A2A93B546003F2216 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2F586D1E2A93B565003F2216 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2FAD7B302A8A81D700F1537C /* Experience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FAD7B332A8A81D700F1537C /* ExperienceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceApp.swift; sourceTree = "<group>"; };
-		2FAD7B352A8A81D700F1537C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2FAD7B372A8A81D800F1537C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FAD7B3A2A8A81D800F1537C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2FAD7B402A8A81D800F1537C /* ExperienceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExperienceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +58,10 @@
 		2FAD7B5E2A8AADF400F1537C /* IGDBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBManager.swift; sourceTree = "<group>"; };
 		2FAD7B602A8AB84000F1537C /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		2FAD7B632A8AE65600F1537C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2FF00E6A2A8CE45B0090D71F /* IGBDHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGBDHelper.swift; sourceTree = "<group>"; };
+		2FF00E752A93AEE50090D71F /* ExperienceTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceTabView.swift; sourceTree = "<group>"; };
+		2FF00E782A93B1850090D71F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2FF00E7A2A93B1EA0090D71F /* GameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +89,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F586D142A93B4F5003F2216 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D152A93B4F8003F2216 /* View */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		2F586D152A93B4F8003F2216 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D162A93B50F003F2216 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F586D182A93B521003F2216 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D192A93B529003F2216 /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2F586D192A93B529003F2216 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D1A2A93B546003F2216 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F586D1C2A93B552003F2216 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D1D2A93B556003F2216 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2F586D1D2A93B556003F2216 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D1E2A93B565003F2216 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2FAD7B272A8A81D700F1537C = {
 			isa = PBXGroup;
 			children = (
 				2FAD7B322A8A81D700F1537C /* Experience */,
+				2FAD7B372A8A81D800F1537C /* Assets.xcassets */,
 				2FAD7B432A8A81D800F1537C /* ExperienceTests */,
 				2FAD7B4D2A8A81D800F1537C /* ExperienceUITests */,
 				2FAD7B312A8A81D700F1537C /* Products */,
@@ -100,11 +161,12 @@
 		2FAD7B322A8A81D700F1537C /* Experience */ = {
 			isa = PBXGroup;
 			children = (
-				2FAD7B622A8AE64300F1537C /* Model */,
+				2FF00E6C2A93AD6F0090D71F /* App */,
+				2FF00E6D2A93AD850090D71F /* Core */,
+				2FF00E6E2A93ADB50090D71F /* Extensions */,
 				2FAD7B5D2A8AADE100F1537C /* Managers */,
-				2FAD7B332A8A81D700F1537C /* ExperienceApp.swift */,
-				2FAD7B352A8A81D700F1537C /* ContentView.swift */,
-				2FAD7B372A8A81D800F1537C /* Assets.xcassets */,
+				2FAD7B622A8AE64300F1537C /* Model */,
+				2FF00E6F2A93ADC40090D71F /* Services */,
 				2FAD7B392A8A81D800F1537C /* Preview Content */,
 			);
 			path = Experience;
@@ -140,6 +202,7 @@
 			children = (
 				2FAD7B5E2A8AADF400F1537C /* IGDBManager.swift */,
 				2FAD7B602A8AB84000F1537C /* Endpoint.swift */,
+				2FF00E6A2A8CE45B0090D71F /* IGBDHelper.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -150,6 +213,73 @@
 				2FAD7B632A8AE65600F1537C /* Game.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2FF00E6C2A93AD6F0090D71F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2FAD7B332A8A81D700F1537C /* ExperienceApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2FF00E6D2A93AD850090D71F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2F586D1C2A93B552003F2216 /* Profile */,
+				2F586D182A93B521003F2216 /* Settings */,
+				2F586D142A93B4F5003F2216 /* Search */,
+				2FF00E702A93ADD40090D71F /* Components */,
+				2FF00E712A93ADDC0090D71F /* Home */,
+				2FF00E722A93ADF50090D71F /* TabBar */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2FF00E6E2A93ADB50090D71F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FF00E6F2A93ADC40090D71F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2FF00E702A93ADD40090D71F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2FF00E7A2A93B1EA0090D71F /* GameCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2FF00E712A93ADDC0090D71F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2FF00E772A93B1600090D71F /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2FF00E722A93ADF50090D71F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				2FF00E752A93AEE50090D71F /* ExperienceTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		2FF00E772A93B1600090D71F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2FF00E782A93B1850090D71F /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +412,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FAD7B362A8A81D700F1537C /* ContentView.swift in Sources */,
+				2FF00E762A93AEE50090D71F /* ExperienceTabView.swift in Sources */,
+				2F586D172A93B50F003F2216 /* SearchView.swift in Sources */,
+				2FF00E7B2A93B1EA0090D71F /* GameCard.swift in Sources */,
 				2FAD7B642A8AE65600F1537C /* Game.swift in Sources */,
 				2FAD7B5F2A8AADF400F1537C /* IGDBManager.swift in Sources */,
+				2F586D1B2A93B546003F2216 /* SettingsView.swift in Sources */,
+				2FF00E6B2A8CE45B0090D71F /* IGBDHelper.swift in Sources */,
+				2FF00E792A93B1850090D71F /* HomeView.swift in Sources */,
 				2FAD7B612A8AB84000F1537C /* Endpoint.swift in Sources */,
+				2F586D1F2A93B565003F2216 /* ProfileView.swift in Sources */,
 				2FAD7B342A8A81D700F1537C /* ExperienceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

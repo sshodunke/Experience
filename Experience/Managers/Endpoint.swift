@@ -8,7 +8,7 @@
 import Foundation
 
 public enum Endpoint: String {
-    case GAMES
+    case games
 }
 
 extension Endpoint {
