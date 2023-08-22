@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var igdbApi: IGDBManager
+    @EnvironmentObject private var store: Store
 
     var body: some View {
         ZStack {
@@ -17,7 +17,7 @@ struct HomeView: View {
                     Text("Highly Rated").font(.title)
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(igdbApi.popularGames, id: \.self) { game in
+                            ForEach(store.popularGames, id: \.id) { game in
                                 if let gameCover = game.cover {
                                     AsyncImage(url: URL(string: "https://images.igdb.com/igdb/image/upload/t_cover_big/\(gameCover.image_id).jpg")) { image in
                                         image
@@ -34,18 +34,18 @@ struct HomeView: View {
                     }
                     Text("Coming Soon").font(.title)
                     VStack(alignment: .leading) {
-                        ForEach(igdbApi.comingSoon, id: \.self) { game in
+                        ForEach(store.gamesComingSoon, id: \.id) { game in
                             GameCard(game: game)
                         }
                     }
                 }.padding()
             }
-
         }
         .task {
             do {
-                try await igdbApi.getListOfGames(endpoint: .games, apiBody: .popularGames)
-                try await igdbApi.getListOfGames(endpoint: .games, apiBody: .comingSoon)
+                try await store.fetchPopularGames()
+                
+                try await store.fetchGamesComingSoon()
             } catch {
                 print(error.localizedDescription)
             }
@@ -56,6 +56,6 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .environmentObject(IGDBManager())
+            .environmentObject(Store(gameService: GameService(baseURL: URL(string: ApiConstants.baseUrl)!)))
     }
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ExperienceApp: App {
+    @StateObject var store = Store(gameService: GameService(baseURL: URL(string: ApiConstants.baseUrl)!))
+    
     var body: some Scene {
         WindowGroup {
             ExperienceTabView()
+                .environmentObject(store)
         }
     }
 }

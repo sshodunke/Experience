@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct ExperienceTabView: View {
-    var igdbApi: IGDBManager = IGDBManager()
-
+    @EnvironmentObject private var store: Store
+    
     var body: some View {
         TabView {
-            
             HomeView()
                 .tabItem {
                     Image(systemName: "house")
@@ -37,12 +36,12 @@ struct ExperienceTabView: View {
                     Text("Settings")
                 }
         }
-        .environmentObject(igdbApi)
     }
 }
 
 struct ExperienceTabView_Previews: PreviewProvider {
     static var previews: some View {
         ExperienceTabView()
+            .environmentObject(Store(gameService: GameService(baseURL: URL(string: ApiConstants.baseUrl)!)))
     }
 }

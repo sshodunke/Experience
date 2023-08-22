@@ -22,7 +22,28 @@ struct GameCard: View {
                         .frame(width: 150, height: 200)
                 }
             }
-            Text(game.name)
+            VStack(alignment: .leading) {
+                Text(game.name)
+                Text(getDate(game.first_release_date))
+            }
+            .padding()
         }
+    }
+    
+    func getDate(_ releaseDateTimestamp: Int) -> String {
+        let dateFormatter = DateFormatter()
+        let date = Date(timeIntervalSince1970: TimeInterval(releaseDateTimestamp))
+        dateFormatter.dateFormat = "dd MMM, yyyy"
+        //dateFormatter.dateStyle = .medium
+        dateFormatter.timeZone = Locale.autoupdatingCurrent.timeZone
+        
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+}
+
+struct GameCard_Previews: PreviewProvider {
+    static var previews: some View {
+        GameCard(game: Game.dummyData.first!)
     }
 }
